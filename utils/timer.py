@@ -1,6 +1,7 @@
 import datetime
+from typing import Tuple
 
-def now_date():
+def now_date() -> Tuple[str, str]:
     weekDays = (
         "Monday",
         "Tuesday",
@@ -12,4 +13,4 @@ def now_date():
     )
     day = datetime.datetime.now()
     day = day.weekday()
-    return (day,weekDays[day]) 
+    return (str(day),weekDays[day]) 
