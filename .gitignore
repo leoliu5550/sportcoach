@@ -1,2 +1,4 @@
 *.ipynb
 temp*
+*.pyc
+*vscode
