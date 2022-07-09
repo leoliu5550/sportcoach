@@ -1,4 +1,22 @@
-from utils import timer
+from utils import timer,datageter
+import pickledb
 
-status  = timer.now_date()
+def main():
+    db = pickledb.load('data//RECROD.db', True)
 
+    # get first timestamp at here
+    TIME_INFO = timer.now_date()
+    print(TIME_INFO)
+    # create the current day record
+    if db.dexists("record",TIME_INFO[1]) == False:
+        db.dadd("record",(TIME_INFO[1],{}))
+    
+    sporter = datageter.sport()
+    sportType = sporter.sport_geter(TIME_INFO)
+    print(sportType)
+
+
+    pass
+
+if __name__ == "__main__":
+    main()

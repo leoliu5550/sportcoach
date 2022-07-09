@@ -1,9 +1,10 @@
 {
-    "0":["REST","SLOWEAR"],
-    "1":["LEG","HIIT"],
-    "2":["CORE","SLOWEAR"],
-    "3":["CHEST+SHOULDER","HIIT"],
-    "4":["BACK","SLOWEAR"],
-    "5":["CORE","HIIT"],
-    "6":["BACK","SLOWEAR"]
+    "0":["BACK","SLOWEAR"],
+    "1":["REST","SLOWEAR"],
+    "2":["LEG","HIIT"],
+    "3":["CORE","SLOWEAR"],
+    "4":["CHEST+SHOULDER","HIIT"],
+    "5":["BACK","SLOWEAR"],
+    "6":["CORE","HIIT"],
+    "comment":"0 is sunday, 1 is Monday"
 }
