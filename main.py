@@ -12,6 +12,7 @@ def main():
         db.dadd("record",(TIME_INFO[1],{}))
     
     sporter = datageter.sport()
+    # change here
     sportType = sporter.sport_geter(TIME_INFO)
     print(sportType)
 
