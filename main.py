@@ -12,8 +12,8 @@ def main():
         db.dadd("record",(TIME_INFO[1],{}))
     
     sporter = datageter.sport()
-    sportType = sporter.sport_geter(TIME_INFO)
-    print(sportType)
+    statusType = sporter.status_geter(TIME_INFO)
+    print(statusType)
 
 
     pass

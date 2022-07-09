@@ -21,10 +21,14 @@ class sport(object):
         return data    
 
     #  should get timer (str(day),weekDays[day]) 
-    def sport_geter(self,data:Tuple) -> list:
+    def status_geter(self,data:Tuple) -> list:
         status_data = self.status_data()
         sport_index = data[0]
         sportType = status_data[sport_index]
         return sportType 
+
+    def sport_geter(self):
+
+        pass
 
     
