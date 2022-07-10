@@ -16,7 +16,7 @@ def main():
     sportType = sporter.sport_geter(TIME_INFO)
     print(sportType)
 
-
+    #sdfsdfsd
     pass
 
 if __name__ == "__main__":
