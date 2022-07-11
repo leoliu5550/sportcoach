@@ -3,3 +3,4 @@ temp*
 *.pyc
 *vscode
 data_storage.py
+*workspace
