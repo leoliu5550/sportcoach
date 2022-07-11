@@ -15,7 +15,7 @@ def main():
     statusType = sporter.status_geter(TIME_INFO)
     print(statusType)
 
-
+    #sdfsdfsd
     pass
 
 if __name__ == "__main__":
