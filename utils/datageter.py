@@ -38,44 +38,48 @@ class sport(object):
         return sportType 
 
     # Aerobic PART
-    def aerobic(self) -> str:
-        sportbase = sport_data()["SPORT"]
-        
-        if data[1] == "SLOWEAR":
-            sportbase = sportbase["Aerobic"]["SLOWEAR"]
-            
-            pass
-        else: #  data[1] == "HIIT"
-            sportbase = sportbase["Aerobic"]["HIIT"]
-            pass
+    def aerobic(self,data) -> str:
+        '''data should be SLOWEAR:0 or HIIT:1'''
+        sportbase = self.sport_data()["SPORT"]["Aerobic"]
+        if data == "SLOWEAR" or data == 0:
+            sportbase = sportbase["SLOWEAR"]
+        if data == "HIIT" or data == 1:
+            sportbase = sportbase["HIIT"]
+
         sportbase = list(sportbase.keys())
         result = random.choice(sportbase)
-
         return result
 
     # Weight PART
-    def Weight(self,category:int) -> str:
-        '''
-        category:
-            0 : "Strength"  set 8
-            1 : "Endurance" set 20
-        '''
-        sportbase = sport_data()["SPORT"]["Weight"]
-        if category == 0:
+    def weight(self,data) -> str:
+        '''data should be Strength:0 or Endurance:1'''
+        sportbase = self.sport_data()["SPORT"]["Weight"]
+        if data == "Strength" or data == 0:
             sportbase = sportbase["Strength"]
-        else:
+        if data == "Endurance" or data == 1:
             sportbase = sportbase["Endurance"]
 
         sportbase = list(sportbase.keys())  
         result = random.choice(sportbase)
         return result 
 
+    # core PART
+    def core(self,data) -> list:
+        '''passing all core data'''
+        sportbase = self.sport_data()["SPORT"]["CORE"]
+        sportbase = list(sportbase.keys())  
+        return sportbase
 
+    # soft must part
+    def soft(self,mark) ->str:
+        sportbase = self.sport_data()["SPORT"]["Soft"]
+        result = sportbase[str(mark)]
 
-    def sport_geter(self,data:list) -> None:
+        return result
 
-        sportbase["Weight"]
-        sportbase["Soft"]
-
-        pass
+    def dict_reverse(self,data:Dict) -> Dict:
+        result = dict()
+        for key in data.keys():
+            result.update({data[key]:key})
+        return result
 
