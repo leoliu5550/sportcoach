@@ -48,7 +48,7 @@
             "sides":{"Mark":[1]},
             "abs":{"Mark":[1]}
         },
-        "Soft":{
+        "SOFT":{
             "0":"Upper",
             "1":"CORE",
             "2":"LEG",

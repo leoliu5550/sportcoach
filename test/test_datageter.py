@@ -92,9 +92,8 @@ class Test_data(object):
         assert data_gt.soft(1) == "CORE"
         assert data_gt.soft(2) == "LEG"
         assert data_gt.soft(3) == "BACK"
-        pass
+        
 
-    def test_dict_dict_reverse(self):
+    def test_dict_reverse(self):
         test = {'a':3 }
-        result = data_gt.dict_reverse(test)
-        assert result == {3:'a'}
+        assert data_gt.dict_reverse(test) == {3:'a'}

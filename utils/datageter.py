@@ -72,7 +72,7 @@ class sport(object):
 
     # soft must part
     def soft(self,mark) ->str:
-        sportbase = self.sport_data()["SPORT"]["Soft"]
+        sportbase = self.sport_data()["SPORT"]["SOFT"]
         result = sportbase[str(mark)]
 
         return result
@@ -82,4 +82,3 @@ class sport(object):
         for key in data.keys():
             result.update({data[key]:key})
         return result
-
