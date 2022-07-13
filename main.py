@@ -2,7 +2,7 @@ from utils import timer,datageter
 import pickledb
 
 def main():
-    db = pickledb.load('data//RECROD.db', True)
+    db = pickledb.load('data#RECROD.db', True)
 
     # get first timestamp at here
     TIME_INFO = timer.now_date()
