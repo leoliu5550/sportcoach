@@ -32,13 +32,13 @@
         },
         "Weight":{
             "Strength":{
-                "Upper_S":{"Mark":[0]},
+                "UPPER_S":{"Mark":[0]},
                 "ABS_S":{"Mark":[1]},
                 "LEG_S":{"Mark":[2]},
                 "BACK_S":{"Mark":[3]}
             },
             "Endurance":{
-                "Upper_E":{"Mark":[0]},
+                "UPPER_E":{"Mark":[0]},
                 "ABS_E":{"Mark":[1]},
                 "LEG_E":{"Mark":[2]},
                 "BACK_E":{"Mark":[3]}
@@ -49,14 +49,14 @@
             "abs":{"Mark":[1]}
         },
         "SOFT":{
-            "0":"Upper",
+            "0":"UPPER",
             "1":"CORE",
             "2":"LEG",
             "3":"BACK"
             }
         },
     "Mark":{
-        "Upper":0,
+        "UPPER":0,
         "CORE":1,
         "LEG":2,
         "BACK":3,

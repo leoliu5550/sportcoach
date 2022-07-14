@@ -2,9 +2,9 @@ import sys,json,pytest
 sys.path.append("//Users//leoliu//Documents//fitproject")
 from utils import datageter as gt
 
-data_gt =gt.sport()
+data_gt = gt.sport()
 
-class Test_data(object):
+class Test_datagetter(object):
     def test_status_data(self):
         with open('data//STATUS.json','r') as file:
             data = json.load(file)
@@ -87,13 +87,19 @@ class Test_data(object):
         data = None
         assert data_gt.core(data) == ["sides" ,"abs"]
 
-    def test_soft(self):
-        assert data_gt.soft(0) == "Upper"
-        assert data_gt.soft(1) == "CORE"
-        assert data_gt.soft(2) == "LEG"
-        assert data_gt.soft(3) == "BACK"
-        
+    def test_soft(self,mocker):
+        with open('data//SPORT.json','r') as file:
+            mock_value = json.load(file)
+        data_gt.sport_data = mocker.patch(
+            "utils.datageter.sport.sport_data",
+            return_value=mock_value)
 
+        assert data_gt.soft(0) == "UPPER"
+        assert data_gt.soft(3) == "BACK"
+
+
+
+class Test_other(object):
     def test_dict_reverse(self):
         test = {'a':3 }
         assert data_gt.dict_reverse(test) == {3:'a'}

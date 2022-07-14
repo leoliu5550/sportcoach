@@ -15,6 +15,7 @@ class sport(object):
         else:
             self.sport_path = 'data//SPORT.json'
         pass
+    
 
     def status_data(self) -> Dict[str, list]:
         path = self.status_path
@@ -71,14 +72,16 @@ class sport(object):
         return sportbase
 
     # soft must part
-    def soft(self,mark) ->str:
-        sportbase = self.sport_data()["SPORT"]["SOFT"]
+    def soft(self,mark) ->list:
+        sportbase = self.sport_data()
+        sportbase = sportbase["SPORT"]["SOFT"]
         result = sportbase[str(mark)]
 
-        return result
+        return result  #sportbase
 
     def dict_reverse(self,data:Dict) -> Dict:
         result = dict()
         for key in data.keys():
             result.update({data[key]:key})
         return result
+
