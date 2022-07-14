@@ -21,3 +21,10 @@ class Test_timer(object):
     def timeline(self):
 
         pass
+
+        
+    def time2(self):
+        pass
+
+    def time3(self):
+        pass 
