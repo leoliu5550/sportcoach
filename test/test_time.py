@@ -17,3 +17,7 @@ class Test_timer(object):
             return_value=mock_value)
         time_ = Getdate()
         assert trans_read(time_) == "Thursday"
+    
+    def timeline(self):
+
+        pass
