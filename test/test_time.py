@@ -24,3 +24,6 @@ class Test_timer(object):
 
     def time3(self):
         pass 
+
+    def time4(self):
+        pass 
