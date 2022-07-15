@@ -18,12 +18,3 @@ class Test_timer(object):
         time_ = Getdate()
         assert trans_read(time_) == "Thursday"
 
-        
-    def time2(self):
-        pass
-
-    def time3(self):
-        pass 
-
-    def time4(self):
-        pass 
